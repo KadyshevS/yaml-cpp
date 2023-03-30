@@ -3,12 +3,12 @@ project "yaml-cpp"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin/int/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
-		"src/**.cpp",
 		"src/**.h",
+		"src/**.cpp",
 		
 		"include/**.h"
 	}
@@ -27,8 +27,8 @@ project "yaml-cpp"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off
-		
+		staticruntime "off"
+
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
